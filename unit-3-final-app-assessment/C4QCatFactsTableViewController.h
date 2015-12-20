@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ColorPickerCommunicationProtocol.h"
+
 
 @interface C4QCatFactsTableViewController : UITableViewController
+
+@property (nonatomic, weak) id <ColorPickerCommunicationProtocol> delegate;
 
 @end

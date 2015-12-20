@@ -7,10 +7,14 @@
 //
 
 #import "C4QCatFactsDetailViewController.h"
+#import <AFNetworking/AFNetworking.h>
 
-#define CAT_GIF_URL @"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
+#define CAT_GIF_URL @"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC"
 
 @interface C4QCatFactsDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *catLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *catImageView;
+@property (nonatomic) NSString *catUrlString;
 
 @end
 
@@ -19,21 +23,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.catLabel.text = self.catStringPassed;
+    self.catImageView.clipsToBounds = YES;
+    
+    
+    //API CALL
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:@"http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+  
+        NSArray *posts = [responseObject objectForKey:@"data"];
+                  NSLog(@"%@", responseObject);
+        
+        int random = arc4random()%[posts count];
+        
+         NSDictionary *randomPost = [posts objectAtIndex:random];
+        
+        NSLog(@"%@", randomPost);
+ 
+        
+                NSDictionary *images = [randomPost objectForKey:@"images"];
+        
+         NSLog(@"%@", images);
+                NSDictionary *originalStill = [images objectForKey:@"original_still"];
+        
+        NSLog(@"%@", originalStill);
+                self.catUrlString = [originalStill objectForKey:@"url"];
+        
+        NSLog(@"%@", self.catUrlString);
+        
+        NSURL *imageURL = [NSURL URLWithString:self.catUrlString];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        self.catImageView.image = [UIImage imageWithData:imageData];
+       
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@", error.userInfo);
+        
+    }];
+ 
+    
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

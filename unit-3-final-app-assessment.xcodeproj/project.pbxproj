@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F367E5A1C25F338000A4C43 /* CustomCatTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F367E581C25F338000A4C43 /* CustomCatTVCell.m */; };
+		5F367E5B1C25F338000A4C43 /* CustomCatTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F367E591C25F338000A4C43 /* CustomCatTVCell.xib */; };
+		5F367E5E1C271457000A4C43 /* CatSavedFactsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F367E5D1C271457000A4C43 /* CatSavedFactsTVC.m */; };
 		8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */; };
 		8D610EA11C2477EB00AADDC2 /* C4QColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E971C2477EB00AADDC2 /* C4QColorPickerViewController.m */; };
 		8D610EA21C2477EB00AADDC2 /* C4QRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D610E991C2477EB00AADDC2 /* C4QRootViewController.m */; };
@@ -23,6 +26,12 @@
 /* Begin PBXFileReference section */
 		4292FCC8B28330B5275CBFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4298908874A5133FD8BE086A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5F367E561C25D021000A4C43 /* ColorPickerCommunicationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerCommunicationProtocol.h; sourceTree = "<group>"; };
+		5F367E571C25F338000A4C43 /* CustomCatTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCatTVCell.h; sourceTree = "<group>"; };
+		5F367E581C25F338000A4C43 /* CustomCatTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCatTVCell.m; sourceTree = "<group>"; };
+		5F367E591C25F338000A4C43 /* CustomCatTVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCatTVCell.xib; sourceTree = "<group>"; };
+		5F367E5C1C271457000A4C43 /* CatSavedFactsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatSavedFactsTVC.h; sourceTree = "<group>"; };
+		5F367E5D1C271457000A4C43 /* CatSavedFactsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatSavedFactsTVC.m; sourceTree = "<group>"; };
 		8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QCatFactsTableViewController.h; sourceTree = "<group>"; };
 		8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C4QCatFactsTableViewController.m; sourceTree = "<group>"; };
 		8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C4QColorPickerViewController.h; sourceTree = "<group>"; };
@@ -96,14 +105,20 @@
 			children = (
 				8D8753061C24774700BBD328 /* AppDelegate.h */,
 				8D8753071C24774700BBD328 /* AppDelegate.m */,
+				5F367E561C25D021000A4C43 /* ColorPickerCommunicationProtocol.h */,
 				8D610E9C1C2477EB00AADDC2 /* C4QViewController.h */,
 				8D610E9D1C2477EB00AADDC2 /* C4QViewController.m */,
 				8D610E961C2477EB00AADDC2 /* C4QColorPickerViewController.h */,
 				8D610E971C2477EB00AADDC2 /* C4QColorPickerViewController.m */,
 				8D610E941C2477EB00AADDC2 /* C4QCatFactsTableViewController.h */,
 				8D610E951C2477EB00AADDC2 /* C4QCatFactsTableViewController.m */,
+				5F367E5C1C271457000A4C43 /* CatSavedFactsTVC.h */,
+				5F367E5D1C271457000A4C43 /* CatSavedFactsTVC.m */,
 				8DA03F721C2499F400328B53 /* C4QCatFactsDetailViewController.h */,
 				8DA03F731C2499F400328B53 /* C4QCatFactsDetailViewController.m */,
+				5F367E571C25F338000A4C43 /* CustomCatTVCell.h */,
+				5F367E581C25F338000A4C43 /* CustomCatTVCell.m */,
+				5F367E591C25F338000A4C43 /* CustomCatTVCell.xib */,
 				8D87530C1C24774700BBD328 /* Main.storyboard */,
 				8D87530F1C24774800BBD328 /* Assets.xcassets */,
 				8D8753031C24774700BBD328 /* Supporting Files */,
@@ -184,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8753131C24774800BBD328 /* LaunchScreen.storyboard in Resources */,
+				5F367E5B1C25F338000A4C43 /* CustomCatTVCell.xib in Resources */,
 				8D8753101C24774800BBD328 /* Assets.xcassets in Resources */,
 				8D87530E1C24774700BBD328 /* Main.storyboard in Resources */,
 			);
@@ -245,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8753081C24774700BBD328 /* AppDelegate.m in Sources */,
+				5F367E5A1C25F338000A4C43 /* CustomCatTVCell.m in Sources */,
 				8D610EA01C2477EB00AADDC2 /* C4QCatFactsTableViewController.m in Sources */,
+				5F367E5E1C271457000A4C43 /* CatSavedFactsTVC.m in Sources */,
 				8D8753051C24774700BBD328 /* main.m in Sources */,
 				8DA03F741C2499F400328B53 /* C4QCatFactsDetailViewController.m in Sources */,
 				8D610EA41C2477EB00AADDC2 /* C4QViewController.m in Sources */,
@@ -312,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
