@@ -75,16 +75,12 @@ UITableViewDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-<<<<<<< HEAD
+
 
     CustomCatTVCell *catCell = [tableView dequeueReusableCellWithIdentifier:@"CatCellID"];
     [tableView registerNib:[UINib nibWithNibName:@"CustomCatTVCell" bundle:nil] forCellReuseIdentifier:@"CatCellID"];
     catCell = [tableView dequeueReusableCellWithIdentifier:@"CatCellID"];
-=======
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
->>>>>>> 8896fd7339cd50b557bee260da82ee06e74da11a
-    
-    
+
     catCell.catFactLabel.text = [self.catLadyArray objectAtIndex:indexPath.row];
     
     catCell.catFact = [self.catLadyArray objectAtIndex:indexPath.row];
